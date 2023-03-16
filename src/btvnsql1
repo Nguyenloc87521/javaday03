@@ -1,0 +1,3 @@
+SELECT * FROM `scores` WHERE `diemToan` = (SELECT MAX(diemToan) FROM `scores`);
+SELECT * FROM `scores` WHERE `dienVan` = (SELECT MIN(dienVan) FROM `scores`);
+SELECT * FROM `scores` WHERE `diemToan` = (SELECT MIN(diemToan) FROM `scores`) OR `dienVan` = (SELECT MIN(dienVan) FROM `scores`) OR `diamAnh` = (SELECT MIN(diamAnh) FROM `scores`);
