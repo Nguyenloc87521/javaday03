@@ -1,0 +1,4 @@
+ câu 1
+     SELECT `sinhvien_id` FROM `tbl_diem` WHERE `diem_toan` = (SELECT MAX(diem_toan) FROM `tbl_diem`);
+ câu 2
+ SELECT `email` FROM tlb_sinhvien JOIN tbl_diem ON sinhvien_id = id WHERE `email` = (SELECT MIN(diem_van) FROM `tbl_diem`);
